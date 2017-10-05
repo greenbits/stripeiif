@@ -49,6 +49,7 @@ namespace :package do
   desc "Clean up packaging folders"
   task :clean do
     sh "rm -rf package"
+    sh "rm -rf packaging/vendor"
     sh "rm -rf packaging/traveling-ruby-*"
   end
 end
