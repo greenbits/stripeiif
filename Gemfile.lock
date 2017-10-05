@@ -1,0 +1,12 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    iif-parser (1.0.11)
+    rake (12.1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  iif-parser
+  rake
