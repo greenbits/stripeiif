@@ -67,8 +67,9 @@ module StripeIif
 
     protected
 
+    # Charge ID: ch_1B7W80HVGziu7wpb0hjHEG4X | Honky Dory <> Green Bits: Non-Managed
     def split_memo(memo)
-      memo_pieces = format_return_memo_if_needed(memo).split(/\:|\|/)
+      memo_pieces = format_return_memo_if_needed(memo).split(/\:|\|/, 3)
 
       # Add optional 3rd element
       if memo_pieces.size == 2

@@ -75,7 +75,8 @@ def create_package(target, os_type = :unix)
   sh "rm -rf #{package_dir}"
   sh "mkdir -p #{package_dir}"
   sh "mkdir -p #{package_dir}/lib/app"
-  sh "cp stripeiif.rb #{package_dir}/lib/app/"
+
+  sh "cp -R bin #{package_dir}/lib/app/"
   sh "cp -R lib #{package_dir}/lib/app/"
   sh "mkdir #{package_dir}/lib/ruby"
   sh "tar -xzf packaging/traveling-ruby-#{TRAVELING_RUBY_VERSION}-#{target}.tar.gz -C #{package_dir}/lib/ruby"
